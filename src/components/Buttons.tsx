@@ -15,7 +15,7 @@ export function ButtonAddLink(props:ButtonAddProps){
   return (
     <div className="flex w-auto max-[600px]:w-full">
       <Link href={`/${props.route}`} className="w-full">
-        <button className="rounded-[20px] w-full bg-gray-500 px-7 py-2 text-white hover:bg-gray-600" onClick={props.onClick}>{props.label}</button>
+        <button className="rounded-[15px] w-full bg-gray-500 px-7 py-2 text-white hover:bg-gray-600 max-[600px]:px-3 max-[600px]:py-1" onClick={props.onClick}>{props.label}</button>
       </Link>
     </div>
   );
@@ -47,7 +47,7 @@ export function ButtonCancel(props:ButtonCancelProps){
   return (
     <div className="flex w-auto max-[600px]:w-full">
       <Link href={`/${props.route}`} className="w-full">
-        <button className="rounded-[20px] max-[600px]:w-full bg-white px-7 py-2 text-gray-400 border border-gray-300 hover:bg-gray-300 hover:text-white">{props.label}</button>
+        <button className="rounded-[15px] max-[600px]:w-full bg-white px-7 py-2 text-gray-400 border border-gray-300 hover:bg-gray-300 hover:text-white max-[600px]:px-3 max-[600px]:py-1">{props.label}</button>
       </Link>
     </div>
   );
