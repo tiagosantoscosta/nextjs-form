@@ -165,37 +165,36 @@ export default function Home() {
 
 
 
-      <div className={`w-1/2 max-[600px]:w-full  transition-all duration-500 ${showList ? 'opacity-100' : 'opacity-0'}`}>
-        <div className="w-full">
-          <div className="grid gap-4">
-            <div className="overflow-auto mt-4 w-full bg-white rounded-[10px] drop-shadow-md p-8">
-              <table className="table-auto w-full text-left text-sm font-light">
-                <thead className="border-b border-gray-300 font-medium">
-                  <tr>
-                    <th scope="col" className="px-1 py-1 ">Cód.</th>
-                    <th scope="col" className="px-1 py-1 ">Nome</th>
-                    <th scope="col" className="px-1 py-1 text-center ">Email</th>
-                    <th scope="col" className="px-1 py-1 text-center ">Mensagem</th>
-                    <th scope="col" className="px-1 py-1 text-center ">Data criação</th>
-                  </tr>
-                </thead>
-                <tbody>
+      <div className={`w-1/2 max-[600px]:w-full transition-all duration-500 ${showList ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="w-full">
+        <div className="grid gap-4">
+          <div className="overflow-auto mt-4 w-full bg-white rounded-[10px] drop-shadow-md p-8">
+            <table className="table-auto w-full text-left text-sm font-light">
+              <thead className="border-b border-gray-300 font-medium">
+                <tr>
+                  <th scope="col" className="px-1 py-1 text-black">Cód.</th>
+                  <th scope="col" className="px-1 py-1 text-black">Nome</th>
+                  <th scope="col" className="px-1 py-1 text-center text-black">Email</th>
+                  <th scope="col" className="px-1 py-1 text-center text-black">Mensagem</th>
+                  <th scope="col" className="px-1 py-1 text-center text-black">Data criação</th>
+                </tr>
+              </thead>
+              <tbody>
                 {userData.map(user => (
                   <tr key={user.id} className="border-b border-gray-100 transition duration-300 ease-in-out hover:bg-gray-100">
-                    <td className="whitespace-nowrap px-3 py-1 ">{user.id}</td>
-                    <td className="whitespace-nowrap px-3 py-1 uppercase">{user.usuario}</td>
-                    <td className="whitespace-nowrap px-3 py-1  lowercase">{user.email}</td>
-                    <td className="whitespace-nowrap px-3 py-1  lowercase">{user.mensagem}</td>
-                    <td className="whitespace-nowrap px-3 py-1  ">{user.created_at}</td>
+                    <td className="whitespace-nowrap px-3 py-1 text-black">{user.id}</td>
+                    <td className="whitespace-nowrap px-3 py-1 uppercase text-black">{user.usuario}</td>
+                    <td className="whitespace-nowrap px-3 py-1 lowercase text-black">{user.email}</td>
+                    <td className="whitespace-nowrap px-3 py-1 lowercase text-black">{user.mensagem}</td>
+                    <td className="whitespace-nowrap px-3 py-1 text-black">{user.created_at}</td>
                   </tr>
-                   ))}
-                </tbody>
-
-              </table>
-            </div>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
+    </div>
 
 
     </div>
