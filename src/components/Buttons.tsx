@@ -66,7 +66,7 @@ export function ButtonTerm(props:ButtonTermProps){
   return (
     <div className="flex w-auto max-[600px]:w-full">
       <Link href={`/${props.route}`} >
-      <button className="rounded-full max-[600px]:w-full bg-white px-10 py-3 text-gray-400 border border-gray-300 hover:bg-gray-300 hover:text-white" onClick={props.onClick}>{props.label}</button>
+      <button className="rounded-[15px] max-[600px]:w-full bg-white px-7 py-2 text-green-400 border border-green-300 hover:bg-green-300 hover:text-white max-[600px]:px-3 max-[600px]:py-1" onClick={props.onClick}>{props.label}</button>
       </Link>
     </div>
   );
