@@ -5,7 +5,7 @@
 const isProduction = true;
 const urlDEV = 'http://localhost:8000';
 const urlHML = 'http://localhost:8000';
-const urlPRD = 'https://api.condohelpdf.com.br';
+const urlPRD = 'https://hilarious-pear-puffer.cyclic.app';
 
 const environmentDEV = {
   production: isProduction,
@@ -19,4 +19,4 @@ const environmentPRD = {
   baseUrl: (isProduction ? `${urlPRD}` : `${urlDEV}`),
 };
 
-export const environment = environmentDEV;
+export const environment = environmentPRD;
