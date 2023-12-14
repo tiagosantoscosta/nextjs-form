@@ -181,7 +181,7 @@ export default function Home() {
                 </thead>
                 <tbody>
                 {userData.map(user => (
-                  <tr className="border-b border-gray-100 transition duration-300 ease-in-out hover:bg-gray-100">
+                  <tr key={user.id} className="border-b border-gray-100 transition duration-300 ease-in-out hover:bg-gray-100">
                     <td className="whitespace-nowrap px-3 py-1 ">{user.id}</td>
                     <td className="whitespace-nowrap px-3 py-1 uppercase">{user.usuario}</td>
                     <td className="whitespace-nowrap px-3 py-1  lowercase">{user.email}</td>
@@ -197,21 +197,9 @@ export default function Home() {
         </div>
       </div>
 
-      
-
-
-
-
 
     </div>
     
-
-
-
-
-
-
-
 
   )
 }
