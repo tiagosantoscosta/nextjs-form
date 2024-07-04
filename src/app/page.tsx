@@ -1,16 +1,16 @@
 "use client"
-import Image from 'next/image'
-import { ButtonAddLink, ButtonCancel, ButtonConfirm, ButtonTerm } from "@/components/Buttons";
-import { useState, useEffect } from "react";
+
+import { ButtonAddLink, ButtonCancel, ButtonTerm } from "@/components/Buttons";
+import { useState } from "react";
 import {environment} from "@/environment/environment";
 
 export default function Home() {
 
   interface User {
     id: number;
-    usuario: string;
+    name: string;
     email: string;
-    mensagem: string;
+    message: string;
     created_at: string;
   }
 
@@ -104,27 +104,6 @@ export default function Home() {
     }
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-500 max-[600px]:p-6" >
       <form className="w-md max-[600px]:h-[400px]  bg-white rounded-[10px] shadow-md p-6">
@@ -148,7 +127,15 @@ export default function Home() {
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
               Mensagem
             </label>
-            <textarea className="no-resize appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-[7px] py-3 px-4 mb-0 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none max-[600px]:h-12"name="message" value={formData.message}   onChange={handleChange} id="message" defaultValue={""} />
+            <textarea 
+                className="no-resize appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-[7px] py-3 px-4 mb-0 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none max-[600px]:h-12"
+                name="message" 
+                value={formData.message} 
+                onChange={handleChange} 
+                id="message" 
+                placeholder="Digite sua mensagem..."
+              />
+
           </div>
         </div>
         
@@ -183,9 +170,9 @@ export default function Home() {
                 {userData.map(user => (
                   <tr key={user.id} className="border-b border-gray-100 transition duration-300 ease-in-out hover:bg-gray-100">
                     <td className="whitespace-nowrap px-3 py-1 text-black">{user.id}</td>
-                    <td className="whitespace-nowrap px-3 py-1 uppercase text-black">{user.usuario}</td>
+                    <td className="whitespace-nowrap px-3 py-1 uppercase text-black">{user.name}</td>
                     <td className="whitespace-nowrap px-3 py-1 lowercase text-black">{user.email}</td>
-                    <td className="whitespace-nowrap px-3 py-1 lowercase text-black">{user.mensagem}</td>
+                    <td className="whitespace-nowrap px-3 py-1 lowercase text-black">{user.message}</td>
                     <td className="whitespace-nowrap px-3 py-1 text-black">{user.created_at}</td>
                   </tr>
                 ))}

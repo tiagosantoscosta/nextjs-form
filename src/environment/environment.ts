@@ -5,7 +5,7 @@
 const isProduction = true;
 const urlDEV = 'http://localhost:8000';
 const urlHML = 'http://localhost:8000';
-const urlPRD = 'https://dark-ruby-turtle-cape.cyclic.app';
+const urlPRD = 'https://backend-app-form-nodejs.onrender.com';
 
 const environmentDEV = {
   production: isProduction,
