@@ -3,6 +3,10 @@
 import { ButtonAddLink, ButtonCancel, ButtonTerm } from "@/components/Buttons";
 import { useState } from "react";
 import {environment} from "@/environment/environment";
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import Link from "next/link";
+import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
 
@@ -21,6 +25,11 @@ export default function Home() {
     email: "",
     message: ""
   });
+
+  const formatDate = (dateString: string | number | Date) => {
+    const date = new Date(dateString);
+    return format(date, 'dd/MM/yyyy HH:mm', { locale: ptBR });
+  };
 
   const [userData, setUserData] = useState<User[]>([]);
 
@@ -160,20 +169,26 @@ export default function Home() {
               <thead className="border-b border-gray-300 font-medium">
                 <tr>
                   <th scope="col" className="px-1 py-1 text-black">Cód.</th>
-                  <th scope="col" className="px-1 py-1 text-black">Nome</th>
-                  <th scope="col" className="px-1 py-1 text-center text-black">Email</th>
+                  <th scope="col" className="px-1 py-1 text-black text-center">Nome</th>
+                  <th scope="col" className="px-1 py-1 text-center text-black">E-mail</th>
                   <th scope="col" className="px-1 py-1 text-center text-black">Mensagem</th>
                   <th scope="col" className="px-1 py-1 text-center text-black">Data criação</th>
+                  <th scope="col" className="px-1 py-1 text-center text-black">Ações</th>
                 </tr>
               </thead>
               <tbody>
                 {userData.map(user => (
                   <tr key={user.id} className="border-b border-gray-100 transition duration-300 ease-in-out hover:bg-gray-100">
-                    <td className="whitespace-nowrap px-3 py-1 text-black">{user.id}</td>
+                    <td className="whitespace-nowrap px-3 py-1 text-black text-center">{user.id}</td>
                     <td className="whitespace-nowrap px-3 py-1 uppercase text-black">{user.name}</td>
-                    <td className="whitespace-nowrap px-3 py-1 lowercase text-black">{user.email}</td>
-                    <td className="whitespace-nowrap px-3 py-1 lowercase text-black">{user.message}</td>
-                    <td className="whitespace-nowrap px-3 py-1 text-black">{user.created_at}</td>
+                    <td className="whitespace-nowrap px-3 py-1 lowercase text-center text-black">{user.email}</td>
+                    <td className="whitespace-nowrap px-3 py-1 lowercase text-center text-black">{user.message}</td>
+                    <td className="whitespace-nowrap px-3 py-1 text-black text-center">{formatDate(user.created_at)}h</td>
+                    <td className="flex justify-center py-2 text-right gap-4 ">
+                      
+                        <PencilSquareIcon className="h-4 w-4 hover:text-blue-500 cursor-pointer" title="Editar" />
+                      
+                    </td>
                   </tr>
                 ))}
               </tbody>
