@@ -160,7 +160,7 @@ export default function Home() {
   
   return (
     <div className="flex flex-col items-center justify-center p-5 bg-gray-500 max-[600px]:p-6" >
-      <form className="w-md max-[600px]:h-[430px]  bg-white rounded-[10px] shadow-md p-6">
+      <form className="w-md max-[600px]:h-[480px]  bg-white rounded-[10px] shadow-md p-6">
         <h2 className="text-lg font-semibold text-gray-700 mb-3 text-center">CRUD | Next.js(React) | Express(Node.js) </h2>
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -183,7 +183,7 @@ export default function Home() {
               Mensagem
             </label>
             <textarea 
-                className="no-resize appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-[7px] py-3 px-4 mb-0 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none max-[600px]:h-12"
+                className="no-resize appearance-none block w-full bg-gray-100 text-gray-700 border border-gray-200 rounded-[7px] py-3 px-4 mb-0 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none max-[600px]:h-24"
                 name="message" 
                 value={formData.message} 
                 onChange={handleChange} 
