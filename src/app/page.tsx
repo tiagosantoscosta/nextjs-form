@@ -159,7 +159,7 @@ export default function Home() {
   }
   
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-500 max-[600px]:p-6" >
+    <div className="flex flex-col items-center justify-center p-5 bg-gray-500 max-[600px]:p-6" >
       <form className="w-md max-[600px]:h-[430px]  bg-white rounded-[10px] shadow-md p-6">
         <h2 className="text-lg font-semibold text-gray-700 mb-3 text-center">CRUD | Next.js(React) | Express(Node.js) </h2>
         <div className="flex flex-wrap -mx-3 mb-6">
