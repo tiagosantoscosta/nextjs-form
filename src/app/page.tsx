@@ -65,7 +65,7 @@ export default function Home() {
 
 
 
-  const handleList = async (event: any) => {
+  const handleList = async () => {
     if (showList === false) {
       setShowList(true);
     } else {
@@ -117,6 +117,7 @@ export default function Home() {
       });
       setButtonLabel('Salvar');
       
+      
     } catch (error) {
       console.log(error);
       alert('Ocorreu um erro.');
@@ -148,8 +149,10 @@ export default function Home() {
       if (!response.ok) {
         throw new Error('Ocorreu um erro ao enviar os dados.');
       }
+      
       resetForm();
       alert('Dados salvos com sucesso!');
+      handleList();
       
   
     } catch (error) {
