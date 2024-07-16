@@ -160,7 +160,7 @@ export default function Home() {
   
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-500 max-[600px]:p-6" >
-      <form className="w-md max-[600px]:h-[400px]  bg-white rounded-[10px] shadow-md p-6">
+      <form className="w-md max-[600px]:h-[430px]  bg-white rounded-[10px] shadow-md p-6">
         <h2 className="text-lg font-semibold text-gray-700 mb-3 text-center">CRUD | Next.js(React) | Express(Node.js) </h2>
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -205,7 +205,7 @@ export default function Home() {
       <div className={`w-1/2 max-[600px]:w-full transition-all duration-500 ${showList ? 'opacity-100' : 'opacity-0'} ` }>
       <div className="w-full">
         <div className="grid gap-4">
-          <div className="overflow-auto mt-4 w-full bg-white rounded-[10px] drop-shadow-md p-8 overflow-y-auto max-h-96">
+          <div className="overflow-auto mt-4 w-full bg-white rounded-[10px] drop-shadow-md p-8 overflow-y-auto max-h-80">
             <table className="table-auto w-full text-left text-sm font-light ">
               <thead className="border-b border-gray-300 font-medium">
                 <tr>
